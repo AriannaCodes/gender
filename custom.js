@@ -1,27 +1,43 @@
 var screens = [{name:"first",
-				text:"Hello", 
-				options: [{code:"A",screen:"second"},
-						  {code:"B",screen:"third"}]},
+				text:"Hello, --name--. What are you concentrating in?", 
+				options: [{code:"Click on me!",screen:"second"},
+						  {code:"Other option",screen:"third"},
+						  {code:"This is another statement",screen:"fun"},
+						  {code:"What's going on here",screen:"statistic"}]},
 			   {name:"second",
-			   	text:"Second screen",
+			   	text:"This is the second screen. It gives you some options.",
 			   	options:[]},
 			   {name:"third",
-			    text:"third!",
+			    text:"This is the third screen. Why did you get here?",
+			    options:[]},
+			   {name:"fun",
+			    text:"Why won't people on Tinder message me back?",
+			    options:[]},
+			   {name:"statistic",
+			    text:"This is a statistic!",
 			    options:[]}];
 
+var player = "Emma";
+
 function genScreen(vals) {
-	first =  "<p>" + vals.text + "</p>";
+	nameInserted = vals.text.replace("--name--", player);
+	first =  "<p>" + nameInserted + "</p>";
 	options = "";
 	for (var i = 0; i < vals.options.length; i++) {
-		options = options + "<a href='#' class='next' screen='" + vals.options[i].screen
+		options = options + "<a href='#' id='next' screen='" + vals.options[i].screen
 				  + "' > >>> " + vals.options[i].code + "</a><br />";
 	}
 	return first + options;
 }
 
-$(".next").click(function(e){
+$("#start").click(function(e){
+	player = $("#player").val();
+	$("#changeable").html(genScreen(screens[0]));
+});
+
+$("#changeable").on("click", "#next", function(e){
 	// iterate to find correct screen
-	var q = $(".next").attr("screen");
+	var q = $(this).attr("screen");
 	var pl = -1;
 	for (var i = 0; i < screens.length; i++) {
 		if (screens[i].name == q) {
@@ -31,5 +47,7 @@ $(".next").click(function(e){
 	if (pl == -1) {
 		alert("Screen not found...");
 	}
-	$("#changeable").html(genScreen(screens[pl]));
+	else {
+		$("#changeable").html(genScreen(screens[pl]));
+	}
 });
