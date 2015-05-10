@@ -1,6 +1,6 @@
 /* Various screens in the game */
 var screens = [{name:"class_selection",
-				text:"Hello, --name--. So, what do you think you're going to major " +
+				text:"Hello, --name--. What do you think you're going to major " +
 					  "in? You haven't declared yet, but your roommate wants to know.", 
 				options: [{code:"Computer Science",type:"classes",screen:"0"},
 						  {code:"Engineering",type:"classes",screen:"1"},
@@ -18,13 +18,19 @@ var screens = [{name:"class_selection",
 			   	source: ""},
 
 			   {name:"english_major",
-			    text:"This is outside the scope of our game.",
+			    text:"This is outside the scope of our game -- while students" + 
+			    	 " in other majors also experience sexism and discrimination," +
+			    	 " we have elected to focus solely on STEM fields.",
 			    options:[],
 			    source: ""},
 
 			    {name:"boy_convo",
-			    text:"The boy you sit down next to seems pretty cool.",
-			    options:[],
+			    text:"The boy you sit down next to nods at you, then looks down " +
+			    	  "at his laptop. When the professor starts talking, sighs. <br />" + 
+			    	  "He says, \"I hope the whole semester isn't like this. I knew this " + 
+			    	  "<em>years</em> ago.\"",
+			    options:[{code:"\"Well, I didn't.\"",type:"next",screen:"boy_convoA"},
+			   			 {code:"\"Oh....\"",type:"next",screen:"boy_convoB"}],
 			    source: ""},
 
 			   {name:"girl_convo",
