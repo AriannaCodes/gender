@@ -10,8 +10,10 @@ body {
 input {
   border: 2px solid #555;
   background-color: #e5e5e5;
-  font-size: 20px;
-  width: 100%;
+  padding: 4px;
+  font-size: 18px;
+  font-family: Courier, Arial;
+  width: 280px;
 }
 
 /* from clipartbest */
@@ -61,6 +63,7 @@ p {
   bottom: 10px;
   right: 10px;
   text-align: right;
-  width: 270px;
+  font-size: 14px;
+  width: 220px;
   position: fixed;
 }
