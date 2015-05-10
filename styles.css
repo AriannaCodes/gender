@@ -37,7 +37,7 @@ input {
   margin-top: calc(50vh - 150px);
 }
 
-a#next, a#start, a#next:visited, a#start:visited {
+a, a:visited {
   color: #fff;
   text-indent: 20px;
   display: block;
@@ -45,6 +45,11 @@ a#next, a#start, a#next:visited, a#start:visited {
 
 p {
   margin-top: -5px;
+}
+
+#source {
+  color: #aaa;
+  right: 0px;
 }
 
 #footer {
