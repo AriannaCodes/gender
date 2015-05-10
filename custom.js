@@ -48,10 +48,26 @@ var screens = [{name:"class_selection",
 			   			  type:"next",screen:"girl_convoB"}],
 			    source: ""},
 
-			    {name:"experience",
-			    text:"...",
-			    options:[],
+			    {name:"girl_convoA",
+			    text:"The rest of the class, the professor talks quicker and quicker.",
+			    options:[{code:"\"Well, it was nice to meet you.\"",
+			    		  type:"next",screen:"experience"}],
 			    source: ""},
+
+			    {name:"girl_convoB",
+			    text:"\"Okay. Well, let me know if you want to work on a project sometime?\"",
+			    options:[{code:"\"Well, it was nice to meet you.\"",
+			    		  type:"next",screen:"experience"}],
+			    source: ""},
+
+			    {name:"experience",
+			    text:"Girls tend to come into college with less preparation in STEM " +
+			    	 "fields. In AP math (calculus and statistics), for example, boys " +
+			    	 "have consistently outnumbered girls by up to 10,000 students per " +
+			    	 "year. As a result, students of different genders can come in on " +
+			    	 "different levels.",
+			    options:[{code:"",type:"next",screen:"friday"}],
+			    source: "ed.gov"},
 
 			    {name:"friday",
 			    text:"...",
@@ -167,7 +183,7 @@ function genScreen(vals) {
 	else {
 		source = "";
 	}
-	return first + options + source;
+	return first + source + options;
 }
 
 /* Iterates through screens to find correct one */

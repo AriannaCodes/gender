@@ -53,6 +53,7 @@ p {
   float: right;
   width: 130px;
   font-size: 14px;
+  text-align: right;
 }
 
 #footer {
