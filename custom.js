@@ -10,13 +10,6 @@ var screens = [{name:"class_selection",
 						  {code:"English",type:"classes",screen:"english_major"}],
 				source: ""},
 
-			   {name:"first_day",
-			   	text:"It's your first day of classes, and you're going to your " + 
-			   		  "9am class, --class--. Where do you sit?",
-			   	options:[{code:"Next to a boy",type:"next",screen:"boy_convo"},
-			   			 {code:"Next to a girl",type:"next",screen:"girl_convo"}],
-			   	source: ""},
-
 			   {name:"english_major",
 			    text:"This is outside the scope of our game -- while students" + 
 			    	 " in other majors also experience sexism and discrimination," +
@@ -24,9 +17,22 @@ var screens = [{name:"class_selection",
 			    options:[],
 			    source: ""},
 
+			   {name:"major_percentages",
+			    text:"18.2% of Computer Science, 19.2% of Engineering, 19.1% of " +
+			         "Physics, 43% of Math, and 58% of Biology majors are female.",
+			    options:[{code:"",type:"next",screen:"first_day"}],
+			    source: "NCG Project, Randal Olson"},		
+
+			   {name:"first_day",
+			   	text:"It's your first day of classes, and you're going to your " + 
+			   		  "9am class, --class--. Where do you sit?",
+			   	options:[{code:"Next to a boy",type:"next",screen:"boy_convo"},
+			   			 {code:"Next to a girl",type:"next",screen:"girl_convo"}],
+			   	source: ""},	    
+
 			    {name:"boy_convo",
 			    text:"The boy you sit down next to nods at you, then looks down " +
-			    	  "at his laptop. When the professor starts talking, sighs. <br />" + 
+			    	  "at his laptop. When the professor starts talking, he sighs. <br />" + 
 			    	  "He says, \"I hope the whole semester isn't like this. I knew this " + 
 			    	  "<em>years</em> ago.\"",
 			    options:[{code:"\"Well, I didn't.\"",type:"next",screen:"boy_convoA"},
@@ -34,11 +40,15 @@ var screens = [{name:"class_selection",
 			    source: ""},
 
 			   {name:"girl_convo",
-			    text:"The girl you sit down next to seems pretty cool.",
-			    options:[],
+			    text:"The girl you sit down next to smiles at you. \"I've never taken " +
+			    	 "a class anything like --class-- before, have you?\" she asks.",
+			    options:[{code:"\"No! God, I thought I was the only one.\"",
+			    		  type:"next",screen:"girl_convoA"},
+			   			 {code:"\"Oh, I've done a few things before...\"",
+			   			  type:"next",screen:"girl_convoB"}],
 			    source: ""},
 
-			    {name:"major_percentages",
+			    {name:"experience",
 			    text:"...",
 			    options:[],
 			    source: ""},
@@ -190,7 +200,7 @@ $("#start").click(function(e){
 $("#changeable").on("click", "#classes", function(e){
 	if ($(this).attr("screen") != "english_major") {
 		major = parseInt($(this).attr("screen"));
-		changeTo("first_day");
+		changeTo("major_percentages");
 	}
 	else {
 		changeTo("end_game");
