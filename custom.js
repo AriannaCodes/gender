@@ -18,7 +18,7 @@ var screens = [{name:"class_selection",
 			   	source: ""},
 
 			   {name:"english_major",
-			    text:"Well, I hate to say this, but English isn't a science.",
+			    text:"This is outside the scope of our game.",
 			    options:[],
 			    source: ""},
 
@@ -166,7 +166,10 @@ function changeTo(q) {
 		alert("Screen not found...");
 	}
 	else {
-		$("#changeable").html(genScreen(screens[pl]));
+		$("#changeable").fadeOut(300, function() {
+			$("#changeable").html(genScreen(screens[pl]));
+			$("#changeable").fadeIn(600);
+		});
 	}
 }
 
