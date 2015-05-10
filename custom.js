@@ -70,24 +70,34 @@ var screens = [{name:"class_selection",
 			    source: "ed.gov"},
 
 			    {name:"friday",
-			    text:"...",
-			    options:[],
+			    text:"It's Friday, and your roommate and her friends are going out. It "+
+			    	 "sounds like a lot of fun, but you have a lengthy problem set due on "+
+			    	 "Monday. What do you do?",
+			    options:[{code:"Go out with them.",
+			    		  type:"next",screen:"go_out"},
+			   			 {code:"Stay in.",
+			   			  type:"next",screen:"stay_in"}],
 			    source: ""},
 
 			    {name:"go_out",
-			    text:"...",
-			    options:[],
+			    text:"You go out, but on Monday, you feel less prepared for the lecture "+
+			    	 "than your peers. Next to you, someone says, \"It took all weekend, "+
+			    	 "but I finally finished the PSET.\"",
+			    options:[{code:"",type:"next",screen:"unlocking"}],
 			    source: ""},
 
 			    {name:"stay_in",
-			    text:"...",
-			    options:[],
+			    text:"Sure, it's lonely, but you get your PSET done. Lecture on Monday "+
+			    	 "is hard, but at least you feel prepared.",
+			    options:[{code:"",type:"next",screen:"unlocking"}],
 			    source: ""},
 
 			    {name:"unlocking",
-			    text:"...",
+			    text:"Due to the 'hardcore' stereotype of a scientist, students often feel "+
+			    	 "that they have to give up a well-balanced social-life in order to be "+
+			    	 "a proper scientist.",
 			    options:[],
-			    source: ""},
+			    source: "Unlocking the Clubhouse"},
 
 			    {name:"office_hours",
 			    text:"...",
@@ -219,7 +229,7 @@ $("#changeable").on("click", "#classes", function(e){
 		changeTo("major_percentages");
 	}
 	else {
-		changeTo("end_game");
+		changeTo("english_major");
 	}
 });
 
