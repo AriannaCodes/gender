@@ -161,18 +161,28 @@ source: "Unlocking the Clubhouse"},
 {name:"classroom",
 text:"You're back in the --class-- lecture hall, but your usual seat has been "+
 	 "taken. Where do you sit?",
-options:[],
+options:[{code:"Next to a boy",type:"next",screen:"boy_convo2"},
+			 {code:"Next to a girl",type:"next",screen:"girl_convo2"}],
 source: ""},
 
 {name:"boy_convo2",
-text:"...",
-options:[],
+text:"You get lost during the lecture. You ask the student next to you to clarfiy" +
+	+ "what is going on. He asks, \"didn't you take math in high school?\"",
+options:[{code:"\"Of course I did, but this is different... \"",type:"next",screen:"convo2_stats"},
+	     {code:"\"Nevermind....\"",type:"next",screen:"convo2_stats"}],
 source: ""},
 
 {name:"girl_convo2",
-text:"...",
-options:[],
+text:"You get lost during the lecture. You ask the student next to you to clarfiy" +
+	+ "what is going on. She replies, \"I’m not really sure what is happening,"+
+	+" this stuff is pretty hard.\"",
+options:[{code:"\"Oh ok, thanks... \"",type:"next",screen:"convo2_stats"}],
 source: ""},
+
+{name:"convo2_stats",
+text:"Research by feminist researchers...",
+options:[{code:"",type:"next",screen:"classroom"}],
+source: "Unlocking the Clubhouse"},
 
 {name:"attrition",
 text:"...",
