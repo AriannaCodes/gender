@@ -154,35 +154,94 @@ options:[{code:"",type:"next",screen:"midterm_stats"}],
 source: ""},
 
 {name:"midterm_stats",
-text:"Research by feminist researchers...",
-options:[{code:"",type:"next",screen:"classroom"}],
+text:"Research by feminist researchers has shown \" shown that women are significantly less" +
+	"confident than men in their math and science abilities, even when their achievements"+
+	"are equal to those of men. Even when they receive the same grades as men, women are still"+
+	"less secure in their academic performance.\"",
+options:[{code:"",type:"next",screen:"internship"}],
 source: "Unlocking the Clubhouse"},
 
 
 {name:"internship",
-text:"...",
-options:[],
+text:"You got a position at a lab on campus. You’re super pumped." +
+	"You wander in, looking a bit unsure. Someone sees you and asks" +
+	"you if you’re looking for the psych department, which is down the hall.",
+	options:[{code:"Accept",type:"next",screen:"internship2"},
+			 {code:"Deny",type:"next",screen:"final_project"}],,
+source: ""},
+
+{name:"internship2",
+text:"You wander in, looking a bit unsure. Someone sees you and asks you if" +
+	"you’re looking for the psych department, which is down the hall.",
+options:[{code:"\"Ummmm...\"",type:"next",screen:"internship_stats"},
+		 {code:"\"No, are you?\"",type:"next",screen:"internship_stats"}],
+source: ""},
+
+{name:"internship_stats",
+text:"Female scientists have to contest with a the set societal image of a scientist,"+
+	"which is almost always male. Consequently, coworkers tend to take female" +
+	"scientists less seriously.",
+options:[{code:"",type:"next",screen:"final_project"}],
 source: ""},
 
 {name:"final_project",
-text:"...",
-options:[],
+text:"You're almost done with your first semester! It's time for you to do a final group"+
+	"project. To get it done, you and your parteners go to a...",
+options:[{code:"Hackathon",type:"next",screen:"hackathon"},
+		{code:"Engineering Lab",type:"next",screen:"secretary"},
+		{code:"Hospital, to shadow a Doctor",type:"next",screen:"doctor"},
+		{code:"Applied Physics Lab",type:"next",screen:"lab_work"}],
 source: ""},
 
 {name:"hackathon",
-text:"...",
-options:[],
+text:"Are you ready to code until the sun rises?",
+options:[{code:"\"Yeah! Let me grab my redbull...\"",type:"next",screen:"hackathon_stats"},
+	{code:"\"Oh, um, ok...\"",type:"next",screen:"hackathon_stats"}],
 source: ""},
+
+{name:"hackathon_stats",
+text:"Students often feel they need to sacrifice large amounts of sleep for the sake of the"+
+	"hardcore computer science stereotype",
+options:[{code:"",type:"next",screen:"winter_break"}],
+source: ""},
+
+{name:"secretary,"
+text:"Your project partners ask you to buy the supplies for your robot, set up times when"+
+	"everyone can meet, reserve lab space, and email the group to keep everyone on track."+
+	"When the time comes to work on the robot, your partners say they've \"got this\""+
+	"You..",
+options:[{code:"Let them do the project, you've done enough work already",type:"next",screen:"secretary_stats"}
+	{code:"Insist on helping anyway",type:"next",screen:"secretary_stats"}],
+source: ""},
+
+{name:"secretary_stats",
+text:"...",
+options:[{code:"",type:"next",screen:"winter_break"}],
+source: ""},
+
+{name:"doctor",
+text:"...",
+options:[{code:"",type:"next",screen:"doctor_stats"}],
+source: ""},
+
+{name:"doctor_stats",
+text:"More than 75 percent of female doctors have reported being harrassed by"+
+	"patients",
+options:[{code:"",type:"next",screen:"winter_break"}],
+source: "National Institute of Health"},
 
 {name:"lab_work",
-text:"...",
-options:[],
+text:"The professor in charge asks, \"Honey, could you grab the pipettes for me? \""+
+	"The professor never offers you a chance at the microscope.",
+options:[{code:"You confront him, and ask for a turn on the microscope",type:"next",screen:"lab_work_stats"},
+		{code:"You sit back and watch your classmates conduct the experiment",type:"next",screen:"lab_work_stats"}],
 source: ""},
 
-{name:"secretary",
-text:"...",
-options:[],
-source: ""},
+{name:"lab_work_stats",
+text:"Female college students often end college with less laboratory experience"+
+	"than their male peers. However, being confrontational is often seen as aggresive",
+options:[{code:"",type:"next",screen:"winter_break"}],
+source: "Slate.com"},
 
 {name:"winter_break",
 text:"...",
@@ -201,29 +260,29 @@ source: ""}];
 
 {name:"classroom",
 text:"You're back in the --class--, last semester, there were other girls in "+
-	 +"your class, now you're the only one. Where do you sit?",
+	 "your class, now you're the only one. Where do you sit?",
 options:[{code:"Next to a boy",type:"next",screen:"attrition"}],
 source: ""},
 
 {name:"attrition",
 text:"\"“Studies show fewer than four in 10 college students who intend to major" +
-+"in a math- or science-based field actually stick with it, and only one in four" +
-+"students who do actually graduate. The attrition rate is even worse for minoritie" +
-+"and women, who represent just a fraction of first- and second-year college students" +
-+"studying in STEM-related fields.\”",
+	"in a math- or science-based field actually stick with it, and only one in four" +
+	"students who do actually graduate. The attrition rate is even worse for minoritie" +
+	"and women, who represent just a fraction of first- and second-year college students" +
+	"studying in STEM-related fields.\”",
 options:[{code:"",type:"next",screen:"boy_convo2"}],
 source: "US News Report"},
 
 {name:"boy_convo2",
 text:"You get lost during the lecture. You ask the student next to you to clarfiy" +
-	+ "what is going on. He asks, \"didn't you take math in high school?\"",
+	 "what is going on. He asks, \"didn't you take math in high school?\"",
 options:[{code:"\"Of course I did, but this is different... \"",type:"next",screen:"convo2_stats"},
 	     {code:"\"Nevermind....\"",type:"next",screen:"convo2_stats"}],
 source: ""},
 
 {name:"convo2_stats",
 text:" Female students are more willing to admit they need help, which can be" +
-+"intimidating when facing confident male classmates. ",
+	"intimidating when facing confident male classmates. ",
 options:[{code:"",type:"next",screen:"attrition"}],
 source: "Unlocking the Clubhouse"},
 
