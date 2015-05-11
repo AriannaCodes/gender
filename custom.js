@@ -250,25 +250,25 @@ options:[{code:"\"Sure, I guess...\"",type:"next",screen:"advantages"},
 	      screen:"displeased"},
 	     {code:"\"Uh, I'm not really interested in dating boys...\"",
 	      type:"next",screen:"heteronormativity"}],
-source: ""}
+source: ""},
 
 {name:"heteronormativity",
 text:"Something about queer students.",
 options:[{code:"",type:"next",screen:"advantages"}],
-source: "???"}
+source: "???"},
 
 {name:"displeased",
 text:"\"You never struck me as a <em>true</em> science type, anyway,\" chimes in "+
 	 "Uncle Ted. \"It's not for everyone.\"",
 options:[{code:"Don't say anything",type:"next",screen:"second_semester"}],
-source: ""}
+source: ""},
 
 {name:"advantages",
 text:"Disadvantages for girls in STEM can often be construed as advantages, "+
 	 "invalidating the struggles faced by female students and making them feel "+
 	 "like they cannot complain.",
 options:[{code:"",type:"next",screen:"second_semester"}],
-source: ""}
+source: ""},
 
 {name:"second_semester",
 text:"Winter break draws to a close, and you...",
