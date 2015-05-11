@@ -205,17 +205,73 @@ options:[],
 source: ""},
 
 {name:"winter_break",
-text:"...",
-options:[],
+text:"The semester ends, and as snow begins to fall you hop on a plane back "+
+	 "home for winter break. Finally, you have time to relax, destress, and talk "+
+	 "to all of your friends at home.",
+options:[{code:"",type:"next",screen:"coffee"}],
 source: ""},
 
-{name:"good_odds",
-text:"...",
-options:[],
+{name:"coffee",
+text:"You get coffee with one of your friends from high school. She's in the middle "+
+	 "of her gap year. \"So,\" she says, \"how's our resident --major-- genius faring "+
+	 "at university?\"",
+options:[{code:"\"To be perfectly honest, I'm thinking of switching majors. "+
+ 	      "I think sociology might be fun?\"",type:"next",screen:"happy"}
+		 {code:"\"Um, okay, I guess. It's a lot harder than I thought it would be, "+
+		 "and everyone seems to know more than me.\"",type:"next",screen:"happy"}],
 source: ""},
+
+{name:"happy",
+text:"\"Well, do whatever makes you happy,\" your friend says. You're not entirely "+
+	 "sure if you can pursue both your academic interests and be happy, but you "+
+	 "don't say that.",
+options:[{code:"",type:"next",screen:"christmas_dinner"}],
+source: ""},
+
+{name:"christmas_dinner",
+text:"Your entire extended family comes over for Christmas dinner. There's Aunt "+
+	 "Bessie, Uncle Ted, Grandpa Joe, about seventeen tiny cousins... It's hectic."
+options:[{code:"",type:"next",screen:"setting_table"}],
+source: ""},
+
+{name:"setting_table",
+text:"Once you're done setting the table for dessert, you all sit down to dig into "+
+	 "some apple pie. \"So,\" says Aunt Bessie. \"Tell us about college!\""
+options:[{code:"\"I wish I weren't the only girl in some of my "+
+	 	  "classes, but otherwise it's okay.\"",type:"next",screen:"ratio"},
+	 	 {code:"\"It's going fine.\"",type:"next",screen:"displeased"}],
+source: ""},
+
+{name:"ratio",
+text:"\"Why wouldn't you like being the only girl in your class?\" asks your uncle. "+
+	 "\"You've got great dating odds with a ratio like <em>that</em>!\"",
+options:[{code:"\"Sure, I guess...\"",type:"next",screen:"advantages"},
+	     {code:"\"Well, it's kind of discouraging.\"",type:"next",
+	      screen:"displeased"},
+	     {code:"\"Uh, I'm not really interested in dating boys...\"",
+	      type:"next",screen:"heteronormativity"}],
+source: ""}
+
+{name:"heteronormativity",
+text:"Something about queer students.",
+options:[{code:"",type:"next",screen:"advantages"}],
+source: "???"}
+
+{name:"displeased",
+text:"\"You never struck me as a <em>true</em> science type, anyway,\" chimes in "+
+	 "Uncle Ted. \"It's not for everyone.\"",
+options:[{code:"Don't say anything",type:"next",screen:"second_semester"}],
+source: ""}
+
+{name:"advantages",
+text:"Disadvantages for girls in STEM can often be construed as advantages, "+
+	 "invalidating the struggles faced by female students and making them feel "+
+	 "like they cannot complain.",
+options:[{code:"",type:"next",screen:"second_semester"}],
+source: ""}
 
 {name:"second_semester",
-text:"...",
+text:"Winter break draws to a close, and you...",
 options:[],
 source: ""}];
 
