@@ -216,7 +216,7 @@ text:"You get coffee with one of your friends from high school. She's in the mid
 	 "of her gap year. \"So,\" she says, \"how's our resident --major-- genius faring "+
 	 "at university?\"",
 options:[{code:"\"To be perfectly honest, I'm thinking of switching majors. "+
- 	      "I think sociology might be fun?\"",type:"next",screen:"happy"}
+ 	      "I think sociology might be fun?\"",type:"next",screen:"happy"},
 		 {code:"\"Um, okay, I guess. It's a lot harder than I thought it would be, "+
 		 "and everyone seems to know more than me.\"",type:"next",screen:"happy"}],
 source: ""},
@@ -230,13 +230,13 @@ source: ""},
 
 {name:"christmas_dinner",
 text:"Your entire extended family comes over for Christmas dinner. There's Aunt "+
-	 "Bessie, Uncle Ted, Grandpa Joe, about seventeen tiny cousins... It's hectic."
+	 "Bessie, Uncle Ted, Grandpa Joe, about seventeen tiny cousins... It's hectic.",
 options:[{code:"",type:"next",screen:"setting_table"}],
 source: ""},
 
 {name:"setting_table",
 text:"Once you're done setting the table for dessert, you all sit down to dig into "+
-	 "some apple pie. \"So,\" says Aunt Bessie. \"Tell us about college!\""
+	 "some apple pie. \"So,\" says Aunt Bessie. \"Tell us about college!\"",
 options:[{code:"\"I wish I weren't the only girl in some of my "+
 	 	  "classes, but otherwise it's okay.\"",type:"next",screen:"ratio"},
 	 	 {code:"\"It's going fine.\"",type:"next",screen:"displeased"}],
