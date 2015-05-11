@@ -1,8 +1,9 @@
 /* Various screens in the game */
 var screens = [
 {name:"class_selection",
-text:"Hello, --name--. What do you think you're going to major " +
-	  "in? You haven't declared yet, but your roommate wants to know.", 
+text:"Hello, --name--, and congratulations on beginning freshman year! What do "+
+      "you think you're going to major " +
+	  "in? (You haven't declared yet, but your roommate wants to know.)", 
 options: [{code:"Computer Science",type:"classes",screen:"0"},
 		  {code:"Engineering",type:"classes",screen:"1"},
 		  {code:"Mathematics",type:"classes",screen:"2"},
@@ -14,22 +15,23 @@ source: ""},
 {name:"english_major",
 text:"This is outside the scope of our game -- while students" + 
 	 " in other majors also experience sexism and discrimination," +
-	 " we have elected to focus solely on STEM fields.",
+	 " we have elected to focus solely on STEM fields. Click the refresh "+
+	 "button at the top right of the screen to start over!",
 options:[],
 source: ""},
 
 {name:"major_percentages",
-text:"In 2013, 18.2% of Computer Science, 19.2% of Engineering, 19.1% of " +
-     "Physics, 43% of Math, and 58% of Biology majors were female. This means " +
-     "that in most STEM majors, female students are in a small minority in " +
-     "the majority of their classes from freshman to senior year.",
+text:"In 2013, female students made up only 18.2% of Computer Science, 19.2% of "+
+     "Engineering, 19.1% of Physics, 43% of Math, and 58% of Biology majors. "+
+     "This means that in most STEM majors, girls will be in a small minority "+
+     "in the majority of their classes, from freshman to senior year.",
 options:[{code:"",type:"next",screen:"first_day"}],
 source: "NCG Project, Randal Olson"},		
 
 {name:"first_day",
 	text:"It's your first day of classes, and you're going to your " + 
 		  "9am lecture for --class--. The hall is almost full when you "+
-		  "arrive, and there are two seats left. Where do you sit?",
+		  "arrive, and there are only two seats left. Where do you sit?",
 	options:[{code:"Next to a boy",type:"next",screen:"boy_convo"},
 			 {code:"Next to a girl",type:"next",screen:"girl_convo"}],
 	source: ""},	    
@@ -41,7 +43,7 @@ text:"The boy you sit down next to nods at you, then looks down " +
 	  "<em>years</em> ago.\"",
 options:[{code:"\"Well, I didn't. But this is an intro class, so " +
 				"I don't think it really matters.\"",type:"next",screen:"boy_convoA"},
-	     {code:"\"Oh....\"",type:"next",screen:"boy_convoB"}],
+	     {code:"\"Oh....\"",type:"next",screen:"experience"}],
 source: ""},
 
 {name:"girl_convo",
@@ -80,60 +82,60 @@ options:[{code:"",type:"next",screen:"friday"}],
 source: "ed.gov"},
 
 {name:"friday",
-text:"It's a Friday two weeks into the semester, and your History-major roommate "+
-	 "and her friends are going out. It sounds like a lot of fun, but you have a "+
-	 "lengthy problem set for --class2-- due on Monday. What do you do?",
-options:[{code:"Go out with them.",
-		  type:"next",screen:"go_out"},
-			 {code:"Stay in.",
-			  type:"next",screen:"stay_in"}],
+text:"It's a Friday two weeks into the semester, and your history-buff roommate "+
+	 "and her friends are going out to First Chance Dance. It sounds like a lot of "+
+	 " fun, but you have a lengthy problem set for --class2-- due on Monday. "+
+	 "What do you do?",
+options:[{code:"Go out with them.", type:"next",screen:"go_out"},
+	     {code:"Stay in.", type:"next",screen:"stay_in"}],
 source: ""},
 
 {name:"go_out",
-text:"You go out, but on Monday, you feel like you didn't do the PSET as well "+
+text:"You go out, but on Monday, you feel like you didn't do the problem set as well "+
 	 "as your peers. Next to you, someone says, \"It took all weekend, "+
 	 "but I finally finished the PSET.\" His friend high-fives him. \"I didn't "+
-	 "sleep at all last night!\" he affirms.",
+	 "sleep at all last night!\" he echoes, happily.",
 options:[{code:"",type:"next",screen:"unlocking"}],
 source: ""},
 
 {name:"stay_in",
-text:"Sure, it's lonely, but you get your PSET done. Lecture on Monday "+
+text:"Sure, it's lonely, but you get your problem set done. Lecture on Monday "+
 	 "is hard, but at least you feel prepared. The guy next to you rolls "+
-	 "his eyes when you ask him whether he thought the PSET was hard. \"Duh,\" "+
-	 "he says, \"but that's kind of the point.\"",
+	 "his eyes when you ask him whether he thought the homework was hard. "+
+	 "\"Challenging, maybe,\" he says, \"but that's kind of the point.\"",
 options:[{code:"",type:"next",screen:"unlocking"}],
 source: ""},
 
 {name:"unlocking",
 text:"Due to the 'hardcore' stereotype of a scientist, students often feel "+
 	 "that they have to give up a well-balanced social-life in order to be "+
-	 "a proper scientist. In <em>Unlocking the Clubhouse</em>, Margolis and Fisher "+
-	 "write that \"One of the characteristics of the ideology of science is that "+
+	 "a proper scientist. In fact, \"One of the characteristics of the ideology "+
+	 "of science is that "+
 	 "science is a calling, something that a scientist wants to do, needs to do above "+
 	 "all else and at all costs.\" Sometimes, that can be hard to keep up with.",
 options:[{code:"",type:"next",screen:"office_hours"}],
 source: "Unlocking the Clubhouse"},
 
 {name:"office_hours",
-text:"You've been struggling in one of your classes, --class2-- -- the last PSET "+
-	 "was hard, and this one is even harder. You decide to go to office hours to get "+
-	 "help.",
+text:"It's midterm season. You've been struggling in one of your classes, --class2-- "+
+	"-- the last PSET was hard, and this one is even harder. You decide to go "+
+	"to office hours to get some guidance.",
 options:[{code:"\"Could you please explain step 2?\"",type:"next",screen:"oh_1"},
 		 {code:"\"I don't really know where to start.\"",type:"next",screen:"oh_2"}],
 source: ""},
 
 {name:"oh_1",
-text:"Your TF steps you through where you're getting stuck in the problem. Finally, "+
-	 "you think you're starting to get it. You thank your TF, and leave. Maybe this "+
+text:"Your Teaching Fellow steps you through where you're getting stuck in the "+
+     "problem. Finally, "+
+	 "you think you're starting to get it. You thank him, and leave. Maybe this "+
 	 "class won't be so bad after all?",
 options:[{code:"",type:"next",screen:"oh_end"}],
 source: ""},
 
 {name:"oh_2",
-text:"Your TF grimaces. \"Okay, beginners struggle with this one,\" he says. "+
-	 "\"And I guess it can be hard for non-majors to fully grasp.\" He helps you, "+
-	 "but you begin to doubt whether or not you can actually do this.",
+text:"Your Teaching Fellow grimaces. \"Okay, beginners struggle with this one,\" "+
+     "he says. \"And I guess it can be hard for non-majors to fully grasp.\" He helps"+
+     " you, but you begin to doubt whether or not you can actually do this.",
 options:[{code:"",type:"next",screen:"oh_end"}],
 source: ""},
 
@@ -147,49 +149,49 @@ source: "\"Why are there so few women in science?\""},
 
 {name:"midterm",
 text:"Two weeks later, and you're sitting in --class2-- lecture when they hand out "+
-	 "your marked midterms. You turn your exam over and discover you got "+
-	 "an 87. The class mean was a 76, but you're not sure. You never got B's in high "+
-	 "school, so this probably means you're not cut out for this...",
+	 "your graded midterms. You turn your exam over and discover you got "+
+	 "an 87. The professor announces that the mean was a 76, but you're still "+
+	 "worried. You never got B's in high school, so this probably means you're "+
+	 "just not cut out for this...",
 options:[{code:"",type:"next",screen:"midterm_stats"}],
 source: ""},
 
 {name:"midterm_stats",
-text:"Research by feminist researchers has shown \" shown that women are significantly less" +
-	"confident than men in their math and science abilities, even when their achievements"+
-	"are equal to those of men. Even when they receive the same grades as men, women are still"+
+text:"Research has shown that \"women are significantly less confident than men "+
+	"in their math and science abilities, even when their achievements are equal "+
+	"to those of men. Even when they receive the same grades as men, women are still"+
 	"less secure in their academic performance.\"",
 options:[{code:"",type:"next",screen:"internship"}],
 source: "Unlocking the Clubhouse"},
 
 {name:"internship",
-text:"You got a position at a lab on campus. You’re super pumped." +
-	"You wander in, looking a bit unsure. Someone sees you and asks" +
-	"you if you’re looking for the psych department, which is down the hall.",
-	options:[{code:"Accept",type:"next",screen:"internship2"},
-			 {code:"Deny",type:"next",screen:"final_project"}],,
+text:"You got a position at a lab on campus! You're super pumped, and think it'll "+
+    "give you some knowledge as to what lab work could really be like. But then "+
+    "again, you already feel so behind, and you might not even be good at it...",
+options:[{code:"Accept",
+		  type:"next",screen:"internship2"},
+		 {code:"Decline",
+		  type:"next",screen:"final_project"}],
 source: ""},
 
 {name:"internship2",
-text:"You wander in, looking a bit unsure. Someone sees you and asks you if" +
-	"you’re looking for the psych department, which is down the hall.",
+text:"You wander in, looking a bit unsure. A grad student sees you and asks you if" +
+	"you're looking for the psych department, which is down the hall.",
 options:[{code:"\"Ummmm...\"",type:"next",screen:"internship_stats"},
 		 {code:"\"No, are you?\"",type:"next",screen:"internship_stats"}],
 source: ""},
 
 {name:"internship_stats",
-text:"Female scientists have to contest with a the set societal image of a scientist,"+
-	"which is almost always male. Consequently, coworkers tend to take female" +
-	"scientists less seriously.",
+text:"Female scientists have to contest with the set societal image of a scientist, "+
+	"which is almost always masculine. Consequently, coworkers tend to take female "+
+	"scientists and their abilities less seriously.",
 options:[{code:"",type:"next",screen:"final_project"}],
 source: ""},
 
 {name:"final_project",
-text:"You're almost done with your first semester! It's time for you to do a final group"+
-	"project. To get it done, you and your parteners go to a...",
-options:[{code:"Hackathon",type:"next",screen:"hackathon"},
-		{code:"Engineering Lab",type:"next",screen:"secretary"},
-		{code:"Hospital, to shadow a Doctor",type:"next",screen:"doctor"},
-		{code:"Applied Physics Lab",type:"next",screen:"lab_work"}],
+text:"You're almost done with your first semester! But before you're completely "+
+	"done, it's time for you to start the dreaded final group project for --class--.",
+options:[{code:"",type:"project",screen:""}],
 source: ""},
 
 {name:"hackathon",
@@ -205,14 +207,14 @@ text:"Students often feel they need to sacrifice large amounts of sleep for the 
 options:[{code:"",type:"next",screen:"winter_break"}],
 source: ""},
 
-{name:"secretary,"
+{name:"secretary",
 text:"Your project partners ask you to buy the supplies for your robot, set up times when"+
 	"everyone can meet, reserve lab space, and email the group to keep everyone on track."+
-	"When the time comes to work on the robot, your partners say they've \"got this\""+
-	"You..",
-options:[{code:"Let them do the project, you've done enough work already",
-		  type:"next",screen:"secretary_stats"}
-	 	 {code:"Insist on helping anyway",type:"next",screen:"secretary_stats"}],
+	"When the time comes to work on the robot, your partners say they've \"got this\"",
+options:[{code:"You let them do the project, you've done enough work already",
+		  type:"next",screen:"secretary_stats"},
+	 	 {code:"You insist on helping anyway",type:"next",
+	 	  screen:"secretary_stats"}],
 source: ""},
 
 {name:"secretary_stats",
@@ -232,15 +234,16 @@ options:[{code:"",type:"next",screen:"winter_break"}],
 source: "National Institute of Health"},
 
 {name:"lab_work",
-text:"The professor in charge asks, \"Honey, could you grab the pipettes for me? \""+
-	"The professor never offers you a chance at the microscope.",
+text:"The professor supervising your group asks, \"Honey, could you grab the "+
+	"pipettes for me?\" The professor never offers you a chance at the microscope.",
 options:[{code:"You confront him, and ask for a turn on the microscope",type:"next",screen:"lab_work_stats"},
 		{code:"You sit back and watch your classmates conduct the experiment",type:"next",screen:"lab_work_stats"}],
 source: ""},
 
 {name:"lab_work_stats",
-text:"Female college students often end college with less laboratory experience"+
-	"than their male peers. However, being confrontational is often seen as aggresive",
+text:"Female college students often end college with less laboratory experience "+
+	"than their male peers. If you don't speak up, you won't get a chance; however, "+
+	"if you ask for your turn, you might be seen as aggressive and confrontational.",
 options:[{code:"",type:"next",screen:"winter_break"}],
 source: "Slate.com"},
 
@@ -264,19 +267,21 @@ source: ""},
 {name:"happy",
 text:"\"Well, do whatever makes you happy,\" your friend says. You're not entirely "+
 	 "sure if you can pursue both your academic interests and be happy, but you "+
-	 "don't say that.",
+	 "don't say that. Instead, you switch the topic of conversation to something "+
+	 "you know you both like -- your favorite TV show.",
 options:[{code:"",type:"next",screen:"christmas_dinner"}],
 source: ""},
 
 {name:"christmas_dinner",
 text:"Your entire extended family comes over for Christmas dinner. There's Aunt "+
-	 "Bessie, Uncle Ted, Grandpa Joe, about seventeen tiny cousins... It's hectic.",
+	 "Bessie, Uncle Ted, Grandpa Joe, about seventeen tiny cousins... it's hectic, "+
+	 "and loud, and everyone keeps peppering you with questions about school.",
 options:[{code:"",type:"next",screen:"setting_table"}],
 source: ""},
 
 {name:"setting_table",
 text:"Once you're done setting the table for dessert, you all sit down to dig into "+
-	 "some apple pie. \"So,\" says Aunt Bessie. \"Tell us about college!\"",
+	 "some apple pie. \"So,\" says Aunt Bessie. \"Tell us about your academics!\"",
 options:[{code:"\"I wish I weren't the only girl in some of my "+
 	 	  "classes, but otherwise it's okay.\"",type:"next",screen:"ratio"},
 	 	 {code:"\"It's going fine.\"",type:"next",screen:"displeased"}],
@@ -293,9 +298,11 @@ options:[{code:"\"Sure, I guess...\"",type:"next",screen:"advantages"},
 source: ""},
 
 {name:"heteronormativity",
-text:"Something about queer students.",
+text:"BGLTQ+ students face special challenges when compared to their straight and "+
+	 "cisgender peers. Having to deal with sexism, homophobia, and transphobia "+
+	 "in and out of the classroom can cause excessive stress.",
 options:[{code:"",type:"next",screen:"advantages"}],
-source: "???"},
+source: "Cech & Waidzunas"},
 
 {name:"displeased",
 text:"\"You never struck me as a <em>true</em> science type, anyway,\" chimes in "+
@@ -304,45 +311,47 @@ options:[{code:"Don't say anything",type:"next",screen:"second_semester"}],
 source: ""},
 
 {name:"advantages",
-text:"Disadvantages for girls in STEM can often be construed as advantages, "+
+text:"Disadvantages for women in STEM are often construed or portrayed as advantages, "+
 	 "invalidating the struggles faced by female students and making them feel "+
-	 "like they cannot complain.",
+	 "like they cannot complain or voice their concerns without facing backlash.",
 options:[{code:"",type:"next",screen:"second_semester"}],
 source: ""},
 
 {name:"second_semester",
-text:"Winter break draws to a close, and you...",
-options:[],
-source: ""}];
+text:"Winter break draws to a close, and you're ready to start another semester.",
+options:[{code:"Board the plane back to college",type:"next",screen:"classroom"}],
+source: ""},
 
 {name:"classroom",
-text:"You're back in the --class--, last semester, there were other girls in "+
-	 "your class, now you're the only one. Where do you sit?",
+text:"You're not used to getting up so early, so you're almost late to your first "+
+	 "class of the semester, --class3--. Last semester, there were other girls in "+
+	 "--class--, the precursor to this class; now you're the only one. Where do "+
+	 "you sit?",
 options:[{code:"Next to a boy",type:"next",screen:"attrition"}],
 source: ""},
 
 {name:"attrition",
-text:"\"“Studies show fewer than four in 10 college students who intend to major" +
-	"in a math- or science-based field actually stick with it, and only one in four" +
-	"students who do actually graduate. The attrition rate is even worse for minoritie" +
+text:"\"Studies show fewer than four in 10 college students who intend to major" +
+	"in a math- or science-based field actually stick with it, and only one in four " +
+	"students who do actually graduate. The attrition rate is even worse for minorities " +
 	"and women, who represent just a fraction of first- and second-year college students" +
-	"studying in STEM-related fields.\”",
+	" studying in STEM-related fields.\"",
 options:[{code:"",type:"next",screen:"boy_convo2"}],
 source: "US News Report"},
 
 {name:"boy_convo2",
-text:"You get lost during the lecture. You ask the student next to you to clarfiy" +
-	 "what is going on. He asks, \"didn't you take math in high school?\"",
-options:[{code:"\"Of course I did, but this is different... \"",type:"next",screen:"convo2_stats"},
+text:"You get lost during the lecture. You ask the guy next to you to clarify " +
+	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
+options:[{code:"\"Of course I did, but this is different... \"",type:"next",
+	      screen:"convo2_stats"},
 	     {code:"\"Nevermind....\"",type:"next",screen:"convo2_stats"}],
 source: ""},
 
 {name:"convo2_stats",
-text:" Female students are more willing to admit they need help, which can be" +
-	"intimidating when facing confident male classmates. ",
-options:[{code:"",type:"next",screen:"attrition"}],
-source: "Unlocking the Clubhouse"},
-
+text:"Female students are more willing to admit they need help, which can be" +
+	"intimidating when confronting (overly) confident male classmates.",
+options:[{code:"",type:"next",screen:"end"}],
+source: "Unlocking the Clubhouse"}];
 
 /* Info about the player, with default name */
 var names = ["Emma", "Annie", "Julia", "Sarah", "Maria"]
@@ -351,12 +360,14 @@ var major = 0;
 var majors = ["Computer Science", "Engineering", "Mathematics", "Physics", "Biology"];
 var classes = ["CS50", "ES51", "Math 21b", "PS12", "LS1a"];
 var classes2 = ["Math 21a", "Math 1b", "Stat 110", "PS15", "MCB16"];
+var classes3 = ["CS51", "ES61", "Math 110", "PS16", "LS1b"];
 
 /* Generates the screen requested */
 function genScreen(vals) {
 	inserted = vals.text.replace("--name--", player);
 	inserted = inserted.replace("--class--", classes[major]);
 	inserted = inserted.replace("--class2--", classes2[major]);
+	inserted = inserted.replace("--class3--", classes3[major]);
 	inserted = inserted.replace("--major--", majors[major]);
 
 	first =  "<p>" + inserted + "</p>";
@@ -410,6 +421,22 @@ $("#changeable").on("click", "#classes", function(e){
 	}
 	else {
 		changeTo("english_major");
+	}
+});
+
+$("#changeable").on("click", "#project", function(e){
+	alert(major);
+	switch (major) {
+		case 0:
+			changeTo("hackathon");
+		case 1:
+			changeTo("secretary");
+		case 2:
+			changeTo("hackathon");
+		case 3:
+			changeTo("doctor");
+		default:
+			changeTo("lab_work");
 	}
 });
 
