@@ -143,7 +143,7 @@ text:"\"The most powerful determinant of whether a woman goes on in science migh
      "unwittingly, might be less likely to encourage female students to pursue their "+
      "academic interests.",
 options:[{code:"",type:"next",screen:"midterm"}],
-source: "Why are there so few women in science?"},
+source: "\"Why are there so few women in science?\""},
 
 {name:"midterm",
 text:"Two weeks later, and you're sitting in --class2-- lecture when they hand out "+
@@ -159,7 +159,7 @@ options:[{code:"",type:"next",screen:"classroom"}],
 source: "Unlocking the Clubhouse"},
 
 {name:"classroom",
-text:"You're back in the --class1-- lecture hall, but your usual seat has been "+
+text:"You're back in the --class-- lecture hall, but your usual seat has been "+
 	 "taken. Where do you sit?",
 options:[],
 source: ""},
