@@ -7,6 +7,11 @@ body {
   font-family: Courier, Arial;
 }
 
+#title {
+  color: #aaa;
+  font-size: 24px;
+}
+
 input {
   border: 2px solid #555;
   background-color: #e5e5e5;
@@ -20,6 +25,7 @@ input {
 #refresh {
   width: 25px;
   height: 25px;
+  opacity: 0.6;
   border-radius: 15px;
   position: fixed;
   right: 10px;
@@ -62,6 +68,7 @@ p {
   height: 55px;
   bottom: 10px;
   right: 10px;
+  color: #aaa;
   text-align: right;
   font-size: 14px;
   width: 220px;
