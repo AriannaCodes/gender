@@ -155,24 +155,8 @@ source: ""},
 
 {name:"midterm_stats",
 text:"Research by feminist researchers...",
-options:[{code:"",type:"next",screen:"classroom"}],
+options:[{code:"",type:"next",screen:"winter_break"}],
 source: "Unlocking the Clubhouse"},
-
-{name:"classroom",
-text:"You're back in the --class-- lecture hall, but your usual seat has been "+
-	 "taken. Where do you sit?",
-options:[],
-source: ""},
-
-{name:"boy_convo2",
-text:"...",
-options:[],
-source: ""},
-
-{name:"girl_convo2",
-text:"...",
-options:[],
-source: ""},
 
 {name:"attrition",
 text:"...",
@@ -259,7 +243,7 @@ source: "???"},
 
 {name:"displeased",
 text:"\"You never struck me as a <em>true</em> science type, anyway,\" chimes in "+
-	 "Uncle Ted. \"It's not for everyone.\"",
+	 "Uncle Ted, sensing your lack of enthusiasm. \"It's not for everyone.\"",
 options:[{code:"Don't say anything",type:"next",screen:"second_semester"}],
 source: ""},
 
@@ -276,9 +260,10 @@ options:[],
 source: ""}];
 
 /* Info about the player, with default name */
-var player = "Emma";
-var major = 0; // 0 is CS, 1 is Engineering, 2 is Math
-			   // 3 is Physics, 4 is Biology
+var names = ["Emma", "Annie", "Julia", "Sarah", "Maria"]
+var player = names[Math.floor(Math.random() * 5)];
+var major = 0; 
+var majors = ["Computer Science", "Engineering", "Mathematics", "Physics", "Biology"];
 var classes = ["CS50", "ES51", "Math 21b", "PS12", "LS1a"];
 var classes2 = ["Math 21a", "Math 1b", "Stat 110", "PS15", "MCB16"];
 
@@ -287,6 +272,8 @@ function genScreen(vals) {
 	inserted = vals.text.replace("--name--", player);
 	inserted = inserted.replace("--class--", classes[major]);
 	inserted = inserted.replace("--class2--", classes2[major]);
+	inserted = inserted.replace("--major--", majors[major]);
+
 	first =  "<p>" + inserted + "</p>";
 	options = "";
 	for (var i = 0; i < vals.options.length; i++) {
