@@ -13,6 +13,7 @@ options: [{code:"Computer Science",type:"classes",screen:"0"},
 source: ""},
 
 {name:"english_major",
+conf:"30",
 text:"This is outside the scope of our game -- while students" + 
 	 " in other majors also experience sexism and discrimination," +
 	 " we have elected to focus solely on STEM fields. Click the refresh "+
@@ -29,14 +30,15 @@ options:[{code:"",type:"next",screen:"first_day"}],
 source: "NCG Project, Randal Olson"},		
 
 {name:"first_day",
-	text:"It's your first day of classes, and you're going to your " + 
-		  "9am lecture for --class--. The hall is almost full when you "+
-		  "arrive, and there are only two seats left. Where do you sit?",
-	options:[{code:"Next to a boy",type:"next",screen:"boy_convo"},
-			 {code:"Next to a girl",type:"next",screen:"girl_convo"}],
-	source: ""},	    
+text:"It's your first day of classes, and you're going to your " + 
+	  "9am lecture for --class--. The hall is almost full when you "+
+	  "arrive, and there are only two seats left. Where do you sit?",
+options:[{code:"Next to a boy",type:"next",screen:"boy_convo"},
+		 {code:"Next to a girl",type:"next",screen:"girl_convo"}],
+source: ""},	    
 
 {name:"boy_convo",
+conf:"-10",
 text:"The boy you sit down next to nods at you, then looks down " +
 	  "at his laptop. When the professor starts talking, he sighs. <br />" + 
 	  "He says, \"I hope the whole semester isn't like this. I knew this " + 
@@ -47,6 +49,7 @@ options:[{code:"\"Well, I didn't. But this is an intro class, so " +
 source: ""},
 
 {name:"girl_convo",
+conf:"5",
 text:"The girl you sit down next to smiles at you. \"I've never taken " +
 	 "a class anything like --class-- before, have you?\" she asks.",
 options:[{code:"\"No! God, I thought I was the only one. I just thought "+
@@ -452,6 +455,7 @@ source: ""}];
 /* Info about the player, with default name */
 var names = ["Emma", "Annie", "Julia", "Sarah", "Maria"]
 var player = names[Math.floor(Math.random() * 5)];
+var confidence = 70;
 var major = 0; 
 var majors = ["Computer Science", "Engineering", "Mathematics", "Physics", "Biology"];
 var classes = ["CS50", "ES51", "Math 21b", "PS12", "LS1a"];
@@ -495,6 +499,14 @@ function changeTo(q) {
 		alert("Screen not found...");
 	}
 	else {
+		// change confidence
+		if (parseInt(screens[pl].conf) < 100 && parseInt(screens[pl].conf) > 0) {
+			confidence = confidence + parseInt(screens[pl].conf);
+		}
+		$( "#blue" ).animate({
+		    width: confidence + "%",
+  		}, 900);
+		// change screen
 		$("#changeable").fadeOut(300, function() {
 			$("#changeable").html(genScreen(screens[pl]));
 			$("#changeable").fadeIn(600);
@@ -521,7 +533,6 @@ $("#changeable").on("click", "#classes", function(e){
 });
 
 $("#changeable").on("click", "#project", function(e){
-	alert
 	switch (major) {
 		case 0:
 			changeTo("hackathon");

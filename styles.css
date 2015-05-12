@@ -93,7 +93,7 @@ p {
 #footer {
   height: 55px;
   bottom: 35px;
-  right: 15px;
+  right: 10px;
   color: #aaa;
   text-align: right;
   font-size: 14px;
@@ -128,4 +128,5 @@ p {
   font-size: 20px;
   line-height: 30px;
   color: #aaa;
+  right: 10px;
 }
