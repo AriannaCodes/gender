@@ -380,8 +380,8 @@ source: ""},
 
 {name:"interview",
 text:"You applied to a bunch of internships earlier in the semester, "+
-	 "and didn't think you'd hear back. But when you woke up this morning there "+
-	 "was an email in your inbox, telling you you have an interview, on campus, "+
+	 "and didn't think you'd hear back. But when you woke up this morning, there "+
+	 "was an email in your inbox -- telling you you have an interview, on campus, "+
 	 "tomorrow! What do you wear?",
 options:[{code:"\"A professional dress \"",type:"dress",
 	      screen:"convo2_stats"},
@@ -389,8 +389,10 @@ options:[{code:"\"A professional dress \"",type:"dress",
 source: ""},
 
 {name:"dress",
-text:"You get lost during the lecture. You ask the guy next to you to clarify " +
-	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
+text:"When you get to the interview, your interviewer -- a glasses-wearing guy in "+
+	 "his mid-twenties -- shakes your hand. You answer all the questions he asks, "+
+	 "diagramming them out on the whiteboard and showing your steps, and at the end "+
+	 "of the interview...",
 options:[{code:"",type:"next",screen:"outfit"}],
 source: ""},
 
@@ -404,7 +406,7 @@ source: ""},
 text:"You get lost during the lecture. You ask the guy next to you to clarify " +
 	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
 options:[{code:"",type:"next",screen:"textbook"}],
-source: ""},
+source: "The Atlantic"},
 
 {name:"textbook",
 text:"You go to buy a textbook...",

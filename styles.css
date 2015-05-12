@@ -5,13 +5,21 @@ body {
   background-color: #2a2a2a;
   color: #eee;
   font-family: Courier, Arial;
+  padding: 0;
+  margin: 0;
 }
 
 #title {
   color: #aaa;
   font-size: 36px;
   position: absolute;
-  bottom: 10px;
+  left: 10px;
+  bottom: 38px;
+}
+
+#space {
+  font-size: 12px;
+  width: 10px;
 }
 
 input {
@@ -84,11 +92,40 @@ p {
 
 #footer {
   height: 55px;
-  bottom: 10px;
-  right: 10px;
+  bottom: 35px;
+  right: 15px;
   color: #aaa;
   text-align: right;
   font-size: 14px;
   width: 220px;
   position: fixed;
+}
+
+#progress {
+  width: 100%;
+  height: 30px;
+  bottom: 0px;
+  position: fixed;
+  background-color: #333;
+  padding: 0px;
+}
+
+#blue {
+  width: 70%;
+  height: 30px;
+  background-color: #336699;
+  opacity: 0.6;
+  position: fixed;
+}
+
+#confidence {
+  width: 100%;
+  height: 30px;
+  bottom: 0px;
+  position: fixed;
+  padding: 0px;
+  text-align: right;
+  font-size: 20px;
+  line-height: 30px;
+  color: #aaa;
 }
