@@ -13,7 +13,7 @@ options: [{code:"Computer Science",type:"classes",screen:"0"},
 source: ""},
 
 {name:"english_major",
-conf:"30",
+conf:30,
 text:"This is outside the scope of our game -- while students" + 
 	 " in other majors also experience sexism and discrimination," +
 	 " we have elected to focus solely on STEM fields. Click the refresh "+
@@ -38,7 +38,7 @@ options:[{code:"Next to a boy",type:"next",screen:"boy_convo"},
 source: ""},	    
 
 {name:"boy_convo",
-conf:"-10",
+conf:-10,
 text:"The boy you sit down next to nods at you, then looks down " +
 	  "at his laptop. When the professor starts talking, he sighs. <br />" + 
 	  "He says, \"I hope the whole semester isn't like this. I knew this " + 
@@ -448,7 +448,7 @@ source: ""},
 
 {name:"end",
 text:"Congrats on making it though your first year! Your confidence started "+
-	 "at 100, and is now at --confidence--.",
+	 "at 70%, and is now at --confidence--%.",
 options:[],
 source: ""}];
 
@@ -469,6 +469,7 @@ function genScreen(vals) {
 	inserted = inserted.replace("--class2--", classes2[major]);
 	inserted = inserted.replace("--class3--", classes3[major]);
 	inserted = inserted.replace("--major--", majors[major]);
+	inserted = inserted.replace("--confidence--", confidence);
 
 	first =  "<p>" + inserted + "</p>";
 	options = "";
@@ -500,7 +501,7 @@ function changeTo(q) {
 	}
 	else {
 		// change confidence
-		if (parseInt(screens[pl].conf) < 100 && parseInt(screens[pl].conf) > 0) {
+		if ((screens[pl].conf < 100) && (screens[pl].conf) > -100) {
 			confidence = confidence + parseInt(screens[pl].conf);
 		}
 		$( "#blue" ).animate({
@@ -520,6 +521,18 @@ $("#start").click(function(e){
 		player = $("#player").val();
 	}
 	changeTo("class_selection");
+});
+
+var on = true;
+$("#sources").click(function(e){
+	if (on) {
+		$("#overlay").fadeOut();
+		on = false;
+	}
+	else {
+		$("#overlay").fadeIn();
+		on = true;
+	}
 });
 
 $("#changeable").on("click", "#classes", function(e){
