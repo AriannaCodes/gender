@@ -42,7 +42,7 @@ text:"The boy you sit down next to nods at you, then looks down " +
 	  "He says, \"I hope the whole semester isn't like this. I knew this " + 
 	  "<em>years</em> ago.\"",
 options:[{code:"\"Well, I didn't. But this is an intro class, so " +
-				"I don't think it really matters.\"",type:"next",screen:"boy_convoA"},
+				"I don't think it really matters.\"",type:"next",screen:"experience"},
 	     {code:"\"Oh....\"",type:"next",screen:"experience"}],
 source: ""},
 
@@ -145,7 +145,7 @@ text:"\"The most powerful determinant of whether a woman goes on in science migh
      "unwittingly, might be less likely to encourage female students to pursue their "+
      "academic interests.",
 options:[{code:"",type:"next",screen:"midterm"}],
-source: "\"Why are there so few women in science?\""},
+source: "Pollack"},
 
 {name:"midterm",
 text:"Two weeks later, and you're sitting in --class2-- lecture when they hand out "+
@@ -425,7 +425,6 @@ $("#changeable").on("click", "#classes", function(e){
 });
 
 $("#changeable").on("click", "#project", function(e){
-	alert(major);
 	switch (major) {
 		case 0:
 			changeTo("hackathon");
