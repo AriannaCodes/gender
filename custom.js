@@ -94,6 +94,7 @@ options:[{code:"Go out with them.", type:"next",screen:"go_out"},
 source: ""},
 
 {name:"go_out",
+conf:-10,
 text:"You go out, but on Monday, you feel like you didn't do the problem set as well "+
 	 "as your peers. Next to you, someone says, \"It took all weekend, "+
 	 "but I finally finished the PSET.\" His friend high-fives him. \"I didn't "+
@@ -102,6 +103,7 @@ options:[{code:"",type:"next",screen:"unlocking"}],
 source: ""},
 
 {name:"stay_in",
+conf:-5,
 text:"Sure, it's lonely, but you get your problem set done. Lecture on Monday "+
 	 "is hard, but at least you feel prepared. The guy next to you rolls "+
 	 "his eyes when you ask him whether he thought the homework was hard. "+
@@ -128,6 +130,7 @@ options:[{code:"\"Could you please explain step 2?\"",type:"next",screen:"oh_1"}
 source: ""},
 
 {name:"oh_1",
+conf:5,
 text:"Your Teaching Fellow steps you through where you're getting stuck in the "+
      "problem. Finally, "+
 	 "you think you're starting to get it. You thank him, and leave. Maybe this "+
@@ -136,6 +139,7 @@ options:[{code:"",type:"next",screen:"oh_end"}],
 source: ""},
 
 {name:"oh_2",
+conf:-10,
 text:"Your Teaching Fellow grimaces. \"Okay, beginners struggle with this one,\" "+
      "he says. \"And I guess it can be hard for non-majors to fully grasp.\" He helps"+
      " you, but you begin to doubt whether or not you can actually do this.",
@@ -178,6 +182,7 @@ options:[{code:"Accept",
 source: ""},
 
 {name:"internship2",
+conf:-6,
 text:"You wander in, looking a bit unsure. A grad student sees you and asks you if" +
 	"you're looking for the psych department, which is down the hall.",
 options:[{code:"\"Ummmm...\"",type:"next",screen:"internship_stats"},
@@ -205,45 +210,54 @@ options:[{code:"\"Yeah! Let me grab my Redbull...\"",
 source: ""},
 
 {name:"hackathon_stats",
-text:"Students often feel they need to sacrifice large amounts of sleep for the sake of the"+
-	"hardcore computer science stereotype",
+text:"Students often feel they need to sacrifice large amounts of sleep or a social life "+
+	 "in order to fit into the hardcore Computer Science stereotype.",
 options:[{code:"",type:"next",screen:"winter_break"}],
 source: ""},
 
 {name:"secretary",
+conf:-8,
 text:"Your project partners ask you to buy the supplies for your robot, set up times when"+
 	"everyone can meet, reserve lab space, and email the group to keep everyone on track."+
 	"When the time comes to work on the robot, your partners say they've \"got this\"",
 options:[{code:"You let them do the project, you've done enough work already",
-		  type:"next",screen:"secretary_stats"},
+		  type:"next",screen:"lab_sec_stats"},
 	 	 {code:"You insist on helping anyway",type:"next",
-	 	  screen:"secretary_stats"}],
-source: ""},
-
-{name:"secretary_stats",
-text:"...",
-options:[{code:"",type:"next",screen:"winter_break"}],
+	 	  screen:"lab_sec_stats"}],
 source: ""},
 
 {name:"doctor",
-text:"...",
+conf:10,
+text:"For your final project, you and your peers shadow a doctor. You ask "+
+	 "her how her career has been so far, and she's positive about it. She loves "+
+	 "how her job lets her help patients and serve her community.",
+options:[{code:"",type:"next",screen:"doctor_2"}],
+source: ""},
+
+{name:"doctor_2",
+conf:-15,
+text:"Later, while you're following the doctor on her rotations, a male colleague "+
+	 "walks by. \"How are the interns treating you, honey?\" he asks.",
 options:[{code:"",type:"next",screen:"doctor_stats"}],
 source: ""},
 
 {name:"doctor_stats",
-text:"More than 75 percent of female doctors have reported being harrassed by"+
-	"patients",
+text:"Female doctors often face discrimination and sexual harassment in the workplace at the hands "+
+	 "of their male coworkers and superiors. Additionally, more than 75 percent "+
+	 "of female doctors have reported being harrassed by"+
+	 "patients.",
 options:[{code:"",type:"next",screen:"winter_break"}],
-source: "National Institute of Health"},
+source: "Walking Out On The Boys, National Institute of Health"},
 
 {name:"lab_work",
+conf:-15,
 text:"The professor supervising your group asks, \"Honey, could you grab the "+
 	"pipettes for me?\" The professor never offers you a chance at the microscope.",
-options:[{code:"You confront him, and ask for a turn on the microscope",type:"next",screen:"lab_work_stats"},
-		{code:"You sit back and watch your classmates conduct the experiment",type:"next",screen:"lab_work_stats"}],
+options:[{code:"You confront him, and ask for a turn on the microscope",type:"next",screen:"lab_sec_stats"},
+		{code:"You sit back and watch your classmates conduct the experiment",type:"next",screen:"lab_sec_stats"}],
 source: ""},
 
-{name:"lab_work_stats",
+{name:"lab_sec_stats",
 text:"Female college students often end college with less laboratory experience "+
 	"than their male peers. If you don't speak up, you won't get a chance; however, "+
 	"if you ask for your turn, you might be seen as aggressive and confrontational.",
@@ -251,6 +265,7 @@ options:[{code:"",type:"next",screen:"winter_break"}],
 source: "Slate.com"},
 
 {name:"winter_break",
+conf:15,
 text:"The semester ends, and as snow begins to fall you hop on a plane back "+
 	 "home for winter break. Finally, you have time to relax, destress, and talk "+
 	 "to all of your friends at home.",
@@ -268,6 +283,7 @@ options:[{code:"\"To be perfectly honest, I'm thinking of switching majors. "+
 source: ""},
 
 {name:"happy",
+conf:-3,
 text:"\"Well, do whatever makes you happy,\" your friend says. You're not entirely "+
 	 "sure if you can pursue both your academic interests and be happy, but you "+
 	 "don't say that. Instead, you switch the topic of conversation to something "+
@@ -291,6 +307,7 @@ options:[{code:"\"I wish I weren't the only girl in some of my "+
 source: ""},
 
 {name:"ratio",
+conf:-10,
 text:"\"Why wouldn't you like being the only girl in your class?\" asks your uncle. "+
 	 "\"You've got great dating odds with a ratio like <em>that</em>!\"",
 options:[{code:"\"Sure, I guess...\"",type:"next",screen:"advantages"},
@@ -301,6 +318,7 @@ options:[{code:"\"Sure, I guess...\"",type:"next",screen:"advantages"},
 source: ""},
 
 {name:"heteronormativity",
+conf:-10,
 text:"BGLTQ+ students face special challenges when compared to their straight and "+
 	 "cisgender peers. Having to deal with sexism, homophobia, and transphobia "+
 	 "in and out of the classroom can cause excessive stress.",
@@ -308,6 +326,7 @@ options:[{code:"",type:"next",screen:"advantages"}],
 source: "Cech & Waidzunas"},
 
 {name:"displeased",
+conf:-5,
 text:"\"You never struck me as a <em>true</em> science type, anyway,\" chimes in "+
 	 "Uncle Ted, sensing your lack of enthusiasm. \"It's not for everyone.\"",
 options:[{code:"Say nothing",type:"next",screen:"second_semester"}],
@@ -326,6 +345,7 @@ options:[{code:"Board the plane back to college",type:"next",screen:"register"}]
 source: ""},
 
 {name:"register",
+conf:10,
 text:"Course registration is never easy, but this semester there's one class you "+
 	 "know you want to take -- a freshman-only --major-- elective with Professor "+
 	 "Laura Smith, which you know is amazing.",
@@ -333,6 +353,7 @@ options:[{code:"Sign up",type:"next",screen:"gone"}],
 source: ""},
 
 {name:"gone",
+conf:-15,
 text:"You try to sign up for the class online, but it's no longer there. When you "+
 	 "go to investigate, you discover that Professor Smith has left because she "+
 	 "didn't get tenure.",
@@ -342,7 +363,7 @@ source: ""},
 {name:"tenure",
 text:"\"Women today earn 41% of PhD's in STEM fields, but make up only 28% "+
  	 "of tenure-track faculty in those fields.\"",
-options:[{code:"Sign up for your other classes",type:"next",screen:"classroom"}],
+options:[{code:"",type:"next",screen:"classroom"}],
 source: "WhiteHouse.gov"},
 
 {name:"classroom",
@@ -363,6 +384,7 @@ options:[{code:"",type:"next",screen:"boy_convo2"}],
 source: "US News Report"},
 
 {name:"boy_convo2",
+conf:-10,
 text:"You get lost during the lecture. You ask the guy next to you to clarify " +
 	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
 options:[{code:"\"Of course I did, but this is different... \"",type:"next",
@@ -377,54 +399,73 @@ options:[{code:"",type:"next",screen:"encouragement"}],
 source: "Unlocking the Clubhouse"},
 
 {name:"encouragement",
-text:"You're reading...",
+conf:5,
+text:"You're reading through blogs in the morning when you see an old article about "+
+	 "the mathematician Maryam Mirzakhani, who won the Fields Medal in August. She's "+
+	 "the first woman to win it, and you can't help but thinking that if "+
+	 "she can be so accomplished, maybe so can you.",
 options:[{code:"",type:"next",screen:"interview"}],
-source: ""},
+source: "AP Online"},
 
 {name:"interview",
 text:"You applied to a bunch of internships earlier in the semester, "+
 	 "and didn't think you'd hear back. But when you woke up this morning, there "+
 	 "was an email in your inbox -- telling you you have an interview, on campus, "+
 	 "tomorrow! What do you wear?",
-options:[{code:"\"A professional dress \"",type:"dress",
-	      screen:"convo2_stats"},
-	     {code:"\"An XKCD t-shirt",type:"next",screen:"t-shirt"}],
+options:[{code:"A professional dress",type:"next",screen:"dress"},
+	     {code:"An XKCD t-shirt",type:"next",screen:"t-shirt"}],
 source: ""},
 
 {name:"dress",
+conf:10,
 text:"When you get to the interview, your interviewer -- a glasses-wearing guy in "+
 	 "his mid-twenties -- shakes your hand. You answer all the questions he asks, "+
-	 "diagramming them out on the whiteboard and showing your steps, and at the end "+
-	 "of the interview...",
+	 "diagramming them out on the whiteboard and showing your steps. You feel pretty "+
+	 "good about yourself.",
+options:[{code:"",type:"next",screen:"dress_2"}],
+source: ""},
+
+{name:"dress_2",
+conf:-15,
+text:"However, as you're stepping out, you hear the interviewer talking to the "+
+	 "receptionist. \"Sure,\" he's saying. \"She was smart, but I'm just not sure "+
+	 "she'd fit in with the company culture...\"",
 options:[{code:"",type:"next",screen:"outfit"}],
 source: ""},
 
 {name:"t-shirt",
-text:"You get lost during the lecture. You ask the guy next to you to clarify " +
-	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
+text:"You feel underdressed for the interview, and you think it might shake your "+
+	 "confidence just a bit, but you think you do well. Now, all you have to do "+
+	 "is wait for your results...",
 options:[{code:"",type:"next",screen:"outfit"}],
 source: ""},
 
 {name:"outfit",
-text:"You get lost during the lecture. You ask the guy next to you to clarify " +
-	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
+text:"Women are often judged... FILL THIS IN",
 options:[{code:"",type:"next",screen:"textbook"}],
 source: "The Atlantic"},
 
 {name:"textbook",
-text:"You go to buy a textbook...",
+conf:-3,
+text:"You go to buy a textbook for next semester, hoping to get it at "+
+	 "a discounted price. It's 1000 pages of dense formulas and diagrams, "+
+	 "and when you get to the front of the line, the cashier remarks, "+
+	 "\"Doing the shopping for your boyfriend? How nice.\"",
 options:[{code:"",type:"internship",screen:""}],
 source: ""},
 
 {name:"yay",
+conf:30,
 text:"You got the internship! Congrats! This is pretty rare for a first-year "+
 	 "student, so you should really feel proud of yourself.",
 options:[{code:"",type:"next",screen:"hiring"}],
 source: ""},
 
 {name:"aww",
+conf:-5,
 text:"Well, I guess form rejection letters really haven't changed since "+
-	 "you applied to college. Better luck next time...",
+	 "you applied to college -- you didn't get the internship. "+
+	 "Better luck next time...",
 options:[{code:"",type:"next",screen:"hiring"}],
 source: ""},
 
@@ -437,18 +478,33 @@ options:[{code:"",type:"next",screen:"symposium"}],
 source: "PNAS"},
 
 {name:"symposium",
-text:"You decide to go to a symposium on science, put on by your school.",
+conf:10,
+text:"You decide to go to a symposium for women in science, put on by your school"+
+	 ". Seeing so many other female scientists in one place, as cheesy as it "+
+	 "sounds, makes you feel really inspired.",
 options:[{code:"",type:"next",screen:"major"}],
 source: ""},
 
 {name:"major",
-text:"Finally, it's time to choose your major...",
-options:[{code:"",type:"next",screen:"end"}],
+text:"Finally, it's time to choose your major. Will you stick with --major--?",
+options:[{code:"Yes",type:"next",screen:"end"},
+		 {code:"No",type:"next",screen:"sad"}],
+source: ""},
+
+{name:"sad",
+text:"You're among the many women who, after the end of their first year of "+
+	 "college, decide that majoring in science just isn't for them. Though you "+
+	 "may have made this choice on your own, consider all of the factors "+
+	 "that led you to this decision.",
+options:[],
 source: ""},
 
 {name:"end",
-text:"Congrats on making it though your first year! Your confidence started "+
-	 "at 70%, and is now at --confidence--%.",
+text:"Congrats on making it though your first year -- not everyone in your position "+
+	 "is able to do the same. Your confidence started "+
+	 "at 70%, and is now at --confidence--%. Though you got through this year "+
+	 "consider that you'll have to do this again -- through college, grad "+
+	 "school, and perhaps the rest of your life.",
 options:[],
 source: ""}];
 
@@ -561,6 +617,16 @@ $("#changeable").on("click", "#project", function(e){
 			break;
 		default:
 			changeTo("lab_work");
+	}
+});
+
+$("#changeable").on("click", "#internship", function(e){
+	var gotIt = (Math.floor(Math.random() * 5) > 3);
+	if (gotIt) {
+		changeTo("yay");
+	}
+	else {
+		changeTo("aww");
 	}
 });
 

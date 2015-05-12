@@ -156,9 +156,9 @@ p {
   bottom: 0px;
   position: fixed;
   padding: 0px;
-  text-align: right;
+  text-align: left;
   font-size: 20px;
   line-height: 30px;
   color: #aaa;
-  right: 10px;
+  left: 10px;
 }
