@@ -9,7 +9,9 @@ body {
 
 #title {
   color: #aaa;
-  font-size: 24px;
+  font-size: 36px;
+  position: absolute;
+  bottom: 10px;
 }
 
 input {
@@ -34,6 +36,22 @@ input {
 }
 
 #refresh:hover {
+  background-color: #444;
+  cursor:pointer;
+}
+
+#sources {
+  width: 25px;
+  height: 25px;
+  opacity: 0.6;
+  border-radius: 15px;
+  position: fixed;
+  right: 10px;
+  top: 45px;
+  background-image: url(sources.png);
+}
+
+#sources:hover {
   background-color: #444;
   cursor:pointer;
 }

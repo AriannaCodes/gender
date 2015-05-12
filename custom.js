@@ -519,15 +519,20 @@ $("#changeable").on("click", "#classes", function(e){
 });
 
 $("#changeable").on("click", "#project", function(e){
+	alert
 	switch (major) {
 		case 0:
 			changeTo("hackathon");
+			break;
 		case 1:
 			changeTo("secretary");
+			break;
 		case 2:
 			changeTo("hackathon");
+			break;
 		case 3:
 			changeTo("doctor");
+			break;
 		default:
 			changeTo("lab_work");
 	}
