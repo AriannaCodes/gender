@@ -307,7 +307,7 @@ source: "Cech & Waidzunas"},
 {name:"displeased",
 text:"\"You never struck me as a <em>true</em> science type, anyway,\" chimes in "+
 	 "Uncle Ted, sensing your lack of enthusiasm. \"It's not for everyone.\"",
-options:[{code:"Don't say anything",type:"next",screen:"second_semester"}],
+options:[{code:"Say nothing",type:"next",screen:"second_semester"}],
 source: ""},
 
 {name:"advantages",
@@ -319,8 +319,28 @@ source: ""},
 
 {name:"second_semester",
 text:"Winter break draws to a close, and you're ready to start another semester.",
-options:[{code:"Board the plane back to college",type:"next",screen:"classroom"}],
+options:[{code:"Board the plane back to college",type:"next",screen:"register"}],
 source: ""},
+
+{name:"register",
+text:"Course registration is never easy, but this semester there's one class you "+
+	 "know you want to take -- a freshman-only --major-- elective with Professor "+
+	 "Laura Smith, which you know is amazing.",
+options:[{code:"Sign up",type:"next",screen:"gone"}],
+source: ""},
+
+{name:"gone",
+text:"You try to sign up for the class online, but it's no longer there. When you "+
+	 "go to investigate, you discover that Professor Smith has left because she "+
+	 "didn't get tenure.",
+options:[{code:"",type:"next",screen:"tenure"}],
+source: ""},
+
+{name:"tenure",
+text:"\"Women today earn 41% of PhD's in STEM fields, but make up only 28% "+
+ 	 "of tenure-track faculty in those fields.\"",
+options:[{code:"Sign up for your other classes",type:"next",screen:"classroom"}],
+source: "WhiteHouse.gov"},
 
 {name:"classroom",
 text:"You're not used to getting up so early, so you're almost late to your first "+
@@ -331,7 +351,7 @@ options:[{code:"Next to a boy",type:"next",screen:"attrition"}],
 source: ""},
 
 {name:"attrition",
-text:"\"Studies show fewer than four in 10 college students who intend to major" +
+text:"\"Studies show fewer than four in 10 college students who intend to major " +
 	"in a math- or science-based field actually stick with it, and only one in four " +
 	"students who do actually graduate. The attrition rate is even worse for minorities " +
 	"and women, who represent just a fraction of first- and second-year college students" +
@@ -350,8 +370,82 @@ source: ""},
 {name:"convo2_stats",
 text:"Female students are more willing to admit they need help, which can be" +
 	"intimidating when confronting (overly) confident male classmates.",
+options:[{code:"",type:"next",screen:"encouragement"}],
+source: "Unlocking the Clubhouse"},
+
+{name:"encouragement",
+text:"You're reading...",
+options:[{code:"",type:"next",screen:"interview"}],
+source: ""},
+
+{name:"interview",
+text:"You applied to a bunch of internships earlier in the semester, "+
+	 "and didn't think you'd hear back. But when you woke up this morning there "+
+	 "was an email in your inbox, telling you you have an interview, on campus, "+
+	 "tomorrow! What do you wear?",
+options:[{code:"\"A professional dress \"",type:"dress",
+	      screen:"convo2_stats"},
+	     {code:"\"An XKCD t-shirt",type:"next",screen:"t-shirt"}],
+source: ""},
+
+{name:"dress",
+text:"You get lost during the lecture. You ask the guy next to you to clarify " +
+	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
+options:[{code:"",type:"next",screen:"outfit"}],
+source: ""},
+
+{name:"t-shirt",
+text:"You get lost during the lecture. You ask the guy next to you to clarify " +
+	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
+options:[{code:"",type:"next",screen:"outfit"}],
+source: ""},
+
+{name:"outfit",
+text:"You get lost during the lecture. You ask the guy next to you to clarify " +
+	 "what is going on. He scoffs, \"didn't you take math in high school?\"",
+options:[{code:"",type:"next",screen:"textbook"}],
+source: ""},
+
+{name:"textbook",
+text:"You go to buy a textbook...",
+options:[{code:"",type:"internship",screen:""}],
+source: ""},
+
+{name:"yay",
+text:"You got the internship! Congrats! This is pretty rare for a first-year "+
+	 "student, so you should really feel proud of yourself.",
+options:[{code:"",type:"next",screen:"hiring"}],
+source: ""},
+
+{name:"aww",
+text:"Well, I guess form rejection letters really haven't changed since "+
+	 "you applied to college. Better luck next time...",
+options:[{code:"",type:"next",screen:"hiring"}],
+source: ""},
+
+{name:"hiring",
+text:"Regardless of whether or not you got the internship, you weren't on an "+
+	 "equal playing field. Men are often seen as more hireable, just because "+
+	 "they have traditionally male names. Such effects are even more pronounced "+
+	 "when race and ethnicity comes into play.",
+options:[{code:"",type:"next",screen:"symposium"}],
+source: "PNAS"},
+
+{name:"symposium",
+text:"You decide to go to a symposium on science, put on by your school.",
+options:[{code:"",type:"next",screen:"major"}],
+source: ""},
+
+{name:"major",
+text:"Finally, it's time to choose your major...",
 options:[{code:"",type:"next",screen:"end"}],
-source: "Unlocking the Clubhouse"}];
+source: ""},
+
+{name:"end",
+text:"Congrats on making it though your first year! Your confidence started "+
+	 "at 100, and is now at --confidence--.",
+options:[],
+source: ""}];
 
 /* Info about the player, with default name */
 var names = ["Emma", "Annie", "Julia", "Sarah", "Maria"]
