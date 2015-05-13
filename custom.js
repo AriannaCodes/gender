@@ -27,7 +27,7 @@ text:"In 2013, female students made up only 18.2% of Computer Science, 19.2% of 
      "This means that in most STEM majors, girls will be in a small minority "+
      "in the majority of their classes, from freshman to senior year.",
 options:[{code:"",type:"next",screen:"first_day"}],
-source: "NCG Project, Randal Olson"},		
+source: "NCG Project, OlsonUS"},		
 
 {name:"first_day",
 text:"It's your first day of classes, and you're going to your " + 
@@ -194,7 +194,7 @@ text:"Female scientists have to contest with the set societal image of a scienti
 	"which is almost always masculine. Consequently, coworkers tend to take female "+
 	"scientists and their abilities less seriously.",
 options:[{code:"",type:"next",screen:"final_project"}],
-source: ""},
+source: "Salario"},
 
 {name:"final_project",
 text:"You're almost done with your first semester! But before you're completely "+
@@ -262,7 +262,7 @@ text:"Female college students often end college with less laboratory experience 
 	"than their male peers. If you don't speak up, you won't get a chance; however, "+
 	"if you ask for your turn, you might be seen as aggressive and confrontational.",
 options:[{code:"",type:"next",screen:"winter_break"}],
-source: "Slate.com"},
+source: "Hu, <em>Slate</em>"},
 
 {name:"winter_break",
 conf:15,
@@ -381,7 +381,7 @@ text:"\"Studies show fewer than four in 10 college students who intend to major 
 	"and women, who represent just a fraction of first- and second-year college students" +
 	" studying in STEM-related fields.\"",
 options:[{code:"",type:"next",screen:"boy_convo2"}],
-source: "US News Report"},
+source: "Williams"},
 
 {name:"boy_convo2",
 conf:-10,
@@ -441,9 +441,11 @@ options:[{code:"",type:"next",screen:"outfit"}],
 source: ""},
 
 {name:"outfit",
-text:"Women are often judged... FILL THIS IN",
+text:"Women are often criticized for wearing traditionally feminine clothes, "+
+	 "from dresses to high heels. Their appearance is scrutinized, and must fit "+
+	 "into a narrow range between \"not feminine enough\" and \"too feminine\".",
 options:[{code:"",type:"next",screen:"textbook"}],
-source: "The Atlantic"},
+source: "Garber"},
 
 {name:"textbook",
 conf:-3,
@@ -455,7 +457,7 @@ options:[{code:"",type:"internship",screen:""}],
 source: ""},
 
 {name:"yay",
-conf:30,
+conf:20,
 text:"You got the internship! Congrats! This is pretty rare for a first-year "+
 	 "student, so you should really feel proud of yourself.",
 options:[{code:"",type:"next",screen:"hiring"}],
@@ -475,7 +477,7 @@ text:"Regardless of whether or not you got the internship, you weren't on an "+
 	 "they have traditionally male names. Such effects are even more pronounced "+
 	 "when race and ethnicity comes into play.",
 options:[{code:"",type:"next",screen:"symposium"}],
-source: "PNAS"},
+source: "Moss-Racusin et. al."},
 
 {name:"symposium",
 conf:10,

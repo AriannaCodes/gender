@@ -80,7 +80,8 @@ input {
   margin: auto;
   margin-top: 10%;
   padding: 20px;
-  height: auto;
+  height: 60%;
+  overflow: scroll;
   background-color: rgb(50,50,50);
   font-size: 12px;
 }
